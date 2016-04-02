@@ -31,4 +31,6 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
+
+gem 'devise'
