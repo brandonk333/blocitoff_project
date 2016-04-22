@@ -12,6 +12,16 @@
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", welcome_index_path %></li>
       <li><%= link_to "About", welcome_about_path %></li>
+    
+    <div class="pull-right user-info">
+        <% if current_user_signed_in? %>
+          Signed in as: <strong><%= current_user.email %></strong> |
+          <%= link_to 'Edit profile', edit_user_registration_path, class: 'btn btn-success' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-success'  %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success'  %> -
+          <%= link_to "Sign In", new_user_session_path, class: 'btn btn-success'  %>
+        <% end %>
+      </div>
     </ul>
     
     <% if flash[:notice] %>
@@ -19,10 +29,10 @@
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:notice] %>
       </div>
-    <% elsif flash[:error] %>
+    <% elsif flash.now[:alert] %>
       <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:error] %>
+        <%= flash.now[:alert] %>
       </div>
     <% elsif flash[:alert] %>
       <div class="alert alert-warning">
