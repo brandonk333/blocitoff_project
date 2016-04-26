@@ -30,7 +30,7 @@ group :development, :test do
 end
 
 gem 'bootstrap'
-#gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
 gem 'devise'
 
