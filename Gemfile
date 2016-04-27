@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'bootstrap'
 gem 'figaro'
 gem 'pry'
 
@@ -27,8 +26,12 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
 end
 
+gem 'bootstrap'
 gem 'bootstrap-sass'
+
+gem 'devise'
+
+gem 'faker'

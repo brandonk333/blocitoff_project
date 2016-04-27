@@ -1,0 +1,3 @@
+<tr id="item-<%= item.id %>">
+  <td><%= link_to "X ", user_item_path(current_user, item), method: :delete, remote: true, class: '' %><%= item.name %></td>
+</tr>
