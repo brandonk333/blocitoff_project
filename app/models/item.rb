@@ -6,6 +6,8 @@ class Item < ActiveRecord::Base
   end
 
   def days_left
-    1-(age_in_days)
+    distance_of_time_in_words(DateTime.now, created_at + 1.days)
   end
 end
+
+  
