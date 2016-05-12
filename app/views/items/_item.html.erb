@@ -1,4 +1,4 @@
 <tr id="item-<%= item.id %>">
   <td><%= link_to "X ", user_item_path(current_user, item), method: :delete, remote: true, class: '' %><%= item.name %></td>
-  <td><%= item.days_left %></td>
+  <td><%= distance_of_time_in_words(DateTime.now, item.created_at + 1.days) %></td>
 </tr>
